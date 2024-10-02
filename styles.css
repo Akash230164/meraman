@@ -1,0 +1,141 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif; /* Changed to Google Font */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    padding: 15px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #e63946; /* Accent color on hover */
+}
+
+.section {
+    display: flex;
+    flex-direction: column; /* Stack heading and paragraph */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    color: white; /* Keep heading color as white */
+    position: relative;
+    overflow: hidden;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.section h1 {
+    font-size: 4em; /* Increase font size for visibility */
+    margin: 0; /* Remove margin to align properly */
+    font-family: 'Lobster', cursive; /* Elegant font for headings */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for depth */
+    animation: scaleIn 1s ease forwards; /* Scale-in effect for heading */
+}
+
+.section p {
+    font-size: 1.8em; /* Increase font size */
+    margin-top: 10px; /* Space above the paragraph */
+    font-family: 'Open Sans', sans-serif; /* Use the same font for body */
+    color: black; /* Changed paragraph text color to black */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Shadow for clarity */
+    animation: floatIn 1.2s ease forwards; /* Float-in effect for paragraph */
+}
+
+
+/* Background images */
+.home-bg {
+    background-image: url('images/amber1.jpg');
+    background-size: cover; /* Cover the entire section */
+    background-position: center;
+}
+
+.about-bg {
+    background-image: url('images/amber2.jpg');
+    background-size: cover; /* Cover the entire section */
+    background-position: center;
+}
+
+.memories-bg {
+    background-image: url('images/amber3.jpg');
+    background-size: cover; /* Cover the entire section */
+    background-position: center;
+}
+
+.special-bg {
+    background-image: url('images/amber4.jpg');
+    background-size: cover; /* Cover the entire section */
+    background-position: center;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s forwards; /* Animation on fade-in */
+}
+
+/* Scale-in animation */
+@keyframes scaleIn {
+    0% {
+        transform: scale(0.5); /* Start small */
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1); /* End at normal size */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Float-in animation */
+@keyframes floatIn {
+    0% {
+        transform: translateY(20px); /* Start lower */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* End at normal position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Full opacity */
+        transform: translateY(0); /* Original position */
+    }
+}
+
+/* Responsive text styles */
+@media (max-width: 768px) {
+    .section h1 {
+        font-size: 2.5em; /* Adjust for smaller screens */
+    }
+
+    .section p {
+        font-size: 1.5em; /* Adjust for smaller screens */
+    }
+}
+
+/* Google Fonts Link */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;700&display=swap');
